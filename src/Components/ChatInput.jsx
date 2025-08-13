@@ -169,24 +169,26 @@ function ChatInput({ onSendMessage, showLeftNav, setLeftNav }) {
 
   // Mobile version
   return (
-    <Box sx={{ width: '100%' }}> {/* Wrapper Box for mobile */}
+      <Box sx={{ width: '100%', px: 2 }}>  {/* Wrapper Box for mobile */}
       {hiddenFileInput}
       {fileChipDisplay}
       <Grid container item className="sendMessageContainer" alignItems="center">
         <Grid item xs={1} container alignItems="center" justifyContent="center">
-          <IconButton
+          {/* <IconButton
             aria-label="menu"
             onClick={() => setLeftNav(!showLeftNav)}
             color="primary"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
         </Grid>
-        <Grid item xs={11}>
+        <Grid item xs={12}>
           <TextField
             className="sendMessageContainer"
             multiline={false}
+            
             fullWidth
+            
             disabled={isListening}
             placeholder={TEXT[language].CHAT_INPUT_PLACEHOLDER}
             id="USERCHATINPUT_MOBILE"
